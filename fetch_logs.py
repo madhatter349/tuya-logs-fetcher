@@ -11,14 +11,15 @@ DEVICE_ID = os.getenv("TUYA_DEVICE_ID")
 cloud = tinytuya.Cloud(apiRegion=REGION, apiKey=ACCESS_ID, apiSecret=ACCESS_KEY)
 
 print("Fetching first page of logs...")
+
 try:
     logs = cloud.getdevicelog(DEVICE_ID, size=50)
 except Exception as e:
-    print(f"❌ API error: {e}")
+    print(f"API error: {e}")
     raise SystemExit(1)
 
 if not logs.get("success"):
-    print("❌ Failed to fetch logs:", logs)
+    print("Failed to fetch logs:", logs)
     raise SystemExit(1)
 
 entries = logs.get("result", {}).get("logs", [])
@@ -33,13 +34,24 @@ if os.path.exists(filename):
 else:
     existing = []
 
-existing_ids = {e.get("id") for e in existing if isinstance(e, dict)}
-new_entries = [e for e in entries if e.get("id") not in existing_ids]
+# Deduplicate using (event_time, code)
+existing_keys = {(e.get("event_time"), e.get("code")) for e in existing if isinstance(e, dict)}
+new_entries = [
+    e for e in entries
+    if (e.get("event_time"), e.get("code")) not in existing_keys
+]
+
+# Add metadata timestamp to new entries
+for e in new_entries:
+    e["_fetched_at"] = datetime.utcnow().isoformat() + "Z"
+
+# Prepend new entries (newest first)
 merged = new_entries + existing
 
 print(f"Fetched {len(new_entries)} new logs, total {len(merged)}.")
 
+# Save merged data
 with open(filename, "w", encoding="utf-8") as f:
     json.dump(merged, f, indent=2, ensure_ascii=False)
 
-print(f"✅ Updated {filename} at {datetime.now().isoformat()}")
+print(f"Updated {filename} at {datetime.now().isoformat()}")
