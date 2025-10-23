@@ -34,16 +34,12 @@ if os.path.exists(filename):
 else:
     existing = []
 
-# Deduplicate using (event_time, code)
-existing_keys = {(e.get("event_time"), e.get("code")) for e in existing if isinstance(e, dict)}
+# Deduplicate by event_time (unique timestamp)
+existing_times = {e.get("event_time") for e in existing if isinstance(e, dict)}
 new_entries = [
     e for e in entries
-    if (e.get("event_time"), e.get("code")) not in existing_keys
+    if e.get("event_time") not in existing_times
 ]
-
-# Add metadata timestamp to new entries
-for e in new_entries:
-    e["_fetched_at"] = datetime.utcnow().isoformat() + "Z"
 
 # Prepend new entries (newest first)
 merged = new_entries + existing
