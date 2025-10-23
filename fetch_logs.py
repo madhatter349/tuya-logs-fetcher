@@ -1,0 +1,40 @@
+import tinytuya
+import json
+import os
+from datetime import datetime
+
+ACCESS_ID = os.getenv("TUYA_ACCESS_ID")
+ACCESS_KEY = os.getenv("TUYA_ACCESS_KEY")
+REGION = os.getenv("TUYA_REGION", "us")
+DEVICE_ID = os.getenv("TUYA_DEVICE_ID")
+
+cloud = tinytuya.Cloud(apiRegion=REGION, apiKey=ACCESS_ID, apiSecret=ACCESS_KEY)
+
+print("Fetching first page of logs...")
+logs = cloud.getdevicelog(DEVICE_ID, size=50)
+
+if not logs.get("success"):
+    raise Exception(f"Failed to fetch logs: {logs}")
+
+entries = logs.get("result", {}).get("logs", [])
+
+# Load existing logs if available
+filename = "latest.json"
+if os.path.exists(filename):
+    with open(filename, "r", encoding="utf-8") as f:
+        existing = json.load(f)
+else:
+    existing = []
+
+# Merge without duplicates
+existing_ids = {e.get("id") for e in existing if isinstance(e, dict)}
+new_entries = [e for e in entries if e.get("id") not in existing_ids]
+merged = new_entries + existing
+
+print(f"Fetched {len(new_entries)} new logs, total {len(merged)}.")
+
+# Save to JSON
+with open(filename, "w", encoding="utf-8") as f:
+    json.dump(merged, f, indent=2, ensure_ascii=False)
+
+print(f"✅ Updated {filename} at {datetime.now().isoformat()}")
