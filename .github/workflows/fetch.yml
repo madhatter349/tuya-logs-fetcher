@@ -3,13 +3,12 @@ name: Fetch Tuya Logs
 on:
   schedule:
     - cron: "*/1 * * * *"  # every minute
-  workflow_dispatch:       # manual trigger
+  workflow_dispatch:        # manual trigger
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
 
-    # Prevent overlapping runs if one takes longer than 1 minute
     concurrency:
       group: tuya-logs-fetch
       cancel-in-progress: true
@@ -23,18 +22,17 @@ jobs:
         with:
           python-version: "3.12"
 
+      # Cache pip packages to avoid re-download each run
       - name: Cache pip dependencies
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
 
       - name: Install dependencies
-        run: |
-          echo "tinytuya==1.17.4" > requirements.txt
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run Tuya fetch script
         env:
@@ -49,14 +47,14 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Ensure file exists
+          # Ensure file exists (prevent empty repo state)
           if [ ! -f latest.json ]; then
             echo "[]" > latest.json
           fi
 
           git add latest.json
 
-          # Commit only if changed
+          # Only commit if there are actual changes
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
