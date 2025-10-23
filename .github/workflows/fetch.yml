@@ -2,7 +2,7 @@ name: Fetch Tuya Logs
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # Every 5 minutes (UTC)
+    - cron: "*/15 * * * *"   # Every 15 minutes (UTC)
   workflow_dispatch:          # Allows manual runs from the Actions tab
 
 jobs:
