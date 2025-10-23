@@ -3,6 +3,38 @@
     "code": "va_humidity",
     "event_from": "1",
     "event_id": 7,
+    "event_time": 1761202603502,
+    "status": "1",
+    "value": "51"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1761202603331,
+    "status": "1",
+    "value": "253"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1761202543798,
+    "status": "1",
+    "value": "51"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1761202543711,
+    "status": "1",
+    "value": "253"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
     "event_time": 1761202484412,
     "status": "1",
     "value": "51"
