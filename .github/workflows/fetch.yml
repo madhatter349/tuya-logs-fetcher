@@ -2,8 +2,8 @@ name: Fetch Tuya Logs
 
 on:
   schedule:
-    - cron: "*/1 * * * *"  # every minute
-  workflow_dispatch:        # manual trigger
+    - cron: "*/5 * * * *"   # Every 5 minutes (UTC)
+  workflow_dispatch:          # Allows manual runs from the Actions tab
 
 jobs:
   fetch:
@@ -14,7 +14,7 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Python
@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      # Cache pip packages to avoid re-download each run
+      # Cache pip dependencies for faster installs
       - name: Cache pip dependencies
         uses: actions/cache@v4
         with:
@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Tuya fetch script
+      - name: Run Tuya log fetcher
         env:
           TUYA_ACCESS_ID: ${{ secrets.TUYA_ACCESS_ID }}
           TUYA_ACCESS_KEY: ${{ secrets.TUYA_ACCESS_KEY }}
@@ -42,19 +42,17 @@ jobs:
           TUYA_DEVICE_ID: ${{ secrets.TUYA_DEVICE_ID }}
         run: python fetch_logs.py
 
-      - name: Commit & push changes
+      - name: Commit and push updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Ensure file exists (prevent empty repo state)
           if [ ! -f latest.json ]; then
             echo "[]" > latest.json
           fi
 
           git add latest.json
 
-          # Only commit if there are actual changes
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
