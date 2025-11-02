@@ -3,6 +3,405 @@
     "code": "va_humidity",
     "event_from": "1",
     "event_id": 7,
+    "event_time": 1762075440283,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075440185,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075380655,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075380486,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075321200,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075321105,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075261569,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075261486,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075202110,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075202022,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075142643,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075142555,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075083028,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075082946,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075023563,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762075023477,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074963945,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074963774,
+    "status": "1",
+    "value": "269"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074904481,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074904389,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074844770,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074844684,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074785388,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074785219,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074725677,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074725595,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074666220,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074666131,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074606757,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074606666,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074547135,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074546965,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "event_from": "1",
+    "event_id": 8,
+    "event_time": 1762074511000,
+    "event_value": "-50",
+    "status": "1"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074487652,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074487563,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074428029,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074427862,
+    "status": "1",
+    "value": "268"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074368567,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074368484,
+    "status": "1",
+    "value": "267"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074308850,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074308759,
+    "status": "1",
+    "value": "267"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074249389,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074249304,
+    "status": "1",
+    "value": "267"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074189759,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074189595,
+    "status": "1",
+    "value": "267"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074130294,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074130206,
+    "status": "1",
+    "value": "267"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074070816,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_temperature",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074070729,
+    "status": "1",
+    "value": "267"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
+    "event_time": 1762074011198,
+    "status": "1",
+    "value": "63"
+  },
+  {
+    "code": "va_humidity",
+    "event_from": "1",
+    "event_id": 7,
     "event_time": 1762073832731,
     "status": "1",
     "value": "63"
